@@ -55,7 +55,6 @@ while True:
             st.warning("No packets captured yet... listening...")
             time.sleep(2)
             continue
-
         df = pd.DataFrame(list(packet_data))
 
     if df.empty:
@@ -109,4 +108,3 @@ while True:
         proto_dist_placeholder.plotly_chart(proto_fig, use_container_width=True)
 
     time.sleep(2)
-
