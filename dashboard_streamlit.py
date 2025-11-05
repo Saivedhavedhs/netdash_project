@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # ---- DEBUG PLOT BLOCK (remove after verifying) ----
 import streamlit as st
 import pandas as pd
@@ -195,5 +195,3 @@ while True:
 
     # --- Update Interval ---
     time.sleep(2)
-
->>>>>>> 95587995bf9b35260da35052dfd7c297b530db18
