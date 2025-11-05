@@ -1,3 +1,26 @@
+# ---- DEBUG PLOT BLOCK (remove after verifying) ----
+import streamlit as st
+import pandas as pd
+import plotly.express as px
+
+st.markdown("## DEBUG: Plot tests (remove after debugging)")
+
+test_df = pd.DataFrame({
+    "time": pd.date_range("2025-01-01", periods=6, freq="T"),
+    "value": [1, 3, 2, 5, 4, 6],
+    "category": ["A","B","A","B","A","B"]
+})
+
+fig_line = px.line(test_df, x="time", y="value", title="Line test")
+st.plotly_chart(fig_line, use_container_width=True)
+
+fig_bar = px.bar(test_df.groupby("category").value.mean().reset_index(), x="category", y="value", title="Bar test")
+st.plotly_chart(fig_bar, use_container_width=True)
+
+fig_pie = px.pie(test_df, names="category", title="Pie test")
+st.plotly_chart(fig_pie, use_container_width=True)
+# ---- END DEBUG BLOCK ----
+
 # dashboard_streamlit.py
 import streamlit as st
 import pandas as pd
