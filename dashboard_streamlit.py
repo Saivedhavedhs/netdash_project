@@ -78,7 +78,7 @@ while True:
         top_ips_placeholder.plotly_chart(bar_fig, use_container_width=True)
 
     # --- PROTOCOL PIE CHART ---
-    if not df..empty:
+if not df.empty:
         proto_counts = df['protocol'].value_counts().reset_index()
         proto_counts.columns = ['protocol', 'count']
         
