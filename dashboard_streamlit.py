@@ -57,7 +57,7 @@ while True:
 
     # --- Top Source IPs ---
     if not df.empty:
-        top_src_ips = df['src_ip'].value_counts().head(10).reset_index()
+   time_chart_placeholder.plotly_chart(fig, use_container_width=True, key="time_chart")
         top_src_ips.columns = ['src_ip', 'count']
         
         bar_fig = px.bar(
