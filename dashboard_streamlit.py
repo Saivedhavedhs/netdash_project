@@ -66,7 +66,7 @@ while True:
             y='count', 
             title="Top 10 Source IPs"
         )
-        top_ips_placeholder.plotly_chart(bar_fig, use_container_width=True)
+ top_ips_placeholder.plotly_chart(bar_fig, use_container_width=True, key="bar_chart")
 
     # Refresh every 2 seconds
     time.sleep(2)
