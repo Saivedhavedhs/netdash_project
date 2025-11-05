@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 streamlit
 pandas
 plotly
-scapy
-=======
-streamlit
-pandas
-plotly
-scapy
->>>>>>> 95587995bf9b35260da35052dfd7c297b530db18
+
