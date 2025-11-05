@@ -60,7 +60,6 @@ while True:
                 y="count", 
                 title="Packets per Second (Live)"
             )
-            # FIX: Removed the 'key' argument
             time_chart_placeholder.plotly_chart(fig, use_container_width=True) 
 
     # --- Top Source IPs ---
@@ -74,11 +73,11 @@ while True:
             y='count', 
             title="Top 10 Source IPs"
         )
-        # FIX: Removed the 'key' argument
         top_ips_placeholder.plotly_chart(bar_fig, use_container_width=True)
 
     # --- PROTOCOL PIE CHART ---
-if not df.empty:
+    # This is the line that had the 'df..empty' typo. It is now fixed.
+    if not df.empty:
         proto_counts = df['protocol'].value_counts().reset_index()
         proto_counts.columns = ['protocol', 'count']
         
@@ -88,8 +87,8 @@ if not df.empty:
             values='count', 
             title="Protocol Distribution"
         )
-        # FIX: Removed the 'key' argument
         proto_dist_placeholder.plotly_chart(proto_fig, use_container_width=True)
 
-    # Refresh every 2 seconds
+    # This is the line that had the IndentationError. It is now fixed.
+    # It is inside the 'while True' loop, but after all 'if' blocks.
     time.sleep(2)
